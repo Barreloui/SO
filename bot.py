@@ -17,7 +17,7 @@ def send_welcome(message):
     itembtn4 = types.KeyboardButton('BTC')
     markup.add(itembtn1, itembtn2, itembtn3, itembtn4)
     msg = bot.send_message(message.chat.id, 
-                    "Узнать наличный курс ПриватБанка (в отделениях)", reply_markup=markup)
+                    , reply_markup=markup)
     bot.register_next_step_handler(msg, process_coin_step)
 
 def process_coin_step(message):
